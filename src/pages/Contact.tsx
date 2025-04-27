@@ -322,14 +322,11 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-          <iframe
-            src="https://www.google.com/maps/embed/v1/place?q=La+chope,+Kenitra&key=AIzaSyCldgLp4_6_oAdDwgZvti4WXiiiKZHxW7Y"
-            width="100%"
-            height="400"
-            style={{ border: 0 }}
-            loading="lazy"
-            title="Bureau"
-          ></iframe>
+            <img 
+              src="https://images.pexels.com/photos/36029/aroni-arsa-children-little.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+              alt="Map" 
+              className="w-full h-[400px] object-cover"
+            />
           </motion.div>
         </div>
       </section>
