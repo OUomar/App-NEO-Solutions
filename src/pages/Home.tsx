@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router';
+import home_background from '../assets/images/home_back_image.webp'; 
+import home_image from '../assets/images/home_image.webp';
 import { Shield, Check, Lock, FileText, Clock, Archive } from 'lucide-react';
 
 const Home = () => {
@@ -10,7 +12,7 @@ const Home = () => {
         <div 
           className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-slate-900/90 z-10"
           style={{
-            backgroundImage: `url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1920')`,
+            backgroundImage: `url(${home_background})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundBlendMode: 'overlay',
@@ -27,7 +29,7 @@ const Home = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               <span className="text-yellow-500">Néo</span> Business Solutions
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl text-justify md:text-2xl text-gray-300 mb-8  leading-relaxed">
               Un cabinet d'Intelligence Économique, expert en recherche d'informations économiques, 
               concurrentielles et en cybersécurité.
             </p>
@@ -50,11 +52,11 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-12 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-slate-800">Pourquoi Choisir Néo Solutions ?</h2>
-            <p className="text-gray-600">
+            <p className="text-gray-600 ">
               Nous accompagnons les entreprises dans leurs démarches stratégiques pour maîtriser leur environnement 
               et prendre les meilleures décisions.
             </p>
@@ -81,7 +83,7 @@ const Home = () => {
               <motion.div
                 key={index}
                 className="bg-white shadow-md rounded-lg p-6 border border-gray-100 hover:shadow-lg transition-shadow"
-                whileHover={{ y: -10 }}
+                whileHover={{ y: -5 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -92,7 +94,6 @@ const Home = () => {
               </motion.div>
             ))}
           </div>
-
 
           <div className="text-center mt-12">
             <p className="text-lg font-medium text-slate-800 mb-4">
@@ -109,9 +110,9 @@ const Home = () => {
       </section>
 
       {/* Client Area Showcase */}
-      <section className="py-16 bg-slate-100">
+      <section className="py-16 bg-slate-100 ">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-justify ">
             <div>
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -120,10 +121,10 @@ const Home = () => {
                 viewport={{ once: true }}
               >
                 <h2 className="text-3xl font-bold mb-4 text-slate-800">Un Espace Client Sécurisé et Intuitif</h2>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 mb-6 text-justify ">
                   Accédez à un espace client sécurisé conçu pour simplifier la gestion de vos commandes en toute confidentialité.
                 </p>
-                <ul className="space-y-4">
+                <ul className="space-y-4  ">
                   {[
                     {
                       icon: <FileText className="h-5 w-5 text-yellow-500" />,
@@ -144,7 +145,7 @@ const Home = () => {
                   ].map((item, index) => (
                     <li key={index} className="flex items-start">
                       <span className="mr-3 mt-1">{item.icon}</span>
-                      <span className="text-gray-700">{item.text}</span>
+                      <span className="text-gray-700 ">{item.text}</span>
                     </li>
                   ))}
                 </ul>
@@ -167,12 +168,12 @@ const Home = () => {
               viewport={{ once: true }}
             >
               <img
-                src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src={home_image}
                 alt="Espace client interface"
                 className="w-full h-auto rounded-lg"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
-              
             </motion.div>
           </div>
         </div>

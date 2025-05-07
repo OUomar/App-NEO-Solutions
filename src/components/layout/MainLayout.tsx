@@ -1,9 +1,9 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router';
 import { useEffect } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 
-const Layout = () => {
+const MainLayout = () => {
   // Scroll to top on route change
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -20,4 +20,4 @@ const Layout = () => {
   );
 };
 
-export default Layout;
+export default MainLayout;

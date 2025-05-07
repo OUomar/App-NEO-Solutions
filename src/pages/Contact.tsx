@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import conatct_background from '../assets/images/contact_back_image.webp';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const Contact = () => {
@@ -49,7 +50,7 @@ const Contact = () => {
         <div 
           className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-slate-900/90 z-10"
           style={{
-            backgroundImage: `url('https://images.pexels.com/photos/7148384/pexels-photo-7148384.jpeg?auto=compress&cs=tinysrgb&w=1920')`,
+            backgroundImage: `url(${conatct_background})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundBlendMode: 'overlay',
@@ -64,7 +65,7 @@ const Contact = () => {
             transition={{ duration: 0.7 }}
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contactez-Nous</h1>
-            <p className="text-xl text-gray-300 mb-6 leading-relaxed">
+            <p className="text-xl text-gray-300 mb-6 leading-relaxed text-justify">
               Chez Néo Solutions, nous accordons une grande importance à vos commentaires, 
               questions et suggestions. Notre équipe est là pour vous accompagner.
             </p>
@@ -84,7 +85,7 @@ const Contact = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <h2 className="text-2xl font-bold mb-6 text-slate-800">Formulaire de contact</h2>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-6 text-justify">
                 Pour nous aider à vous répondre au mieux, veuillez remplir les champs ci-dessous.
                 Néo Solutions préserve la confidentialité de vos données. Les renseignements que
                 vous fournirez dans ce formulaire seront utilisés uniquement pour répondre à votre
@@ -296,41 +297,6 @@ const Contact = () => {
               </div>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="py-16 bg-slate-50">
-        <div className="container mx-auto px-4 md:px-6">
-          <motion.div
-            className="text-center max-w-3xl mx-auto mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-3xl font-bold mb-4 text-slate-800">Notre Bureau</h2>
-            <p className="text-gray-600">
-              Rendez-nous visite dans nos locaux au centre d'affaires La chope à Kenitra.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="rounded-lg overflow-hidden shadow-lg"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-          <iframe
-            src="https://www.google.com/maps/embed/v1/place?q=La+chope,+Kenitra&key=AIzaSyCldgLp4_6_oAdDwgZvti4WXiiiKZHxW7Y"
-            width="100%"
-            height="400"
-            style={{ border: 0 }}
-            loading="lazy"
-            title="Bureau"
-          ></iframe>
-          </motion.div>
         </div>
       </section>
     </>

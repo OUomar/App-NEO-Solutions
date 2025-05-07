@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router';
+import services_background from '../assets/images/services_back_image.webp';
+import services_image_1 from '../assets/images/services_image_1.webp';
 import { Search, Check, Scale, Shield, Database, FileSearch } from 'lucide-react';
 
 const ServiceCard = ({ 
@@ -26,7 +28,7 @@ const ServiceCard = ({
     >
       <div className="mb-3 text-yellow-500 flex justify-center">{icon}</div>
       <h3 className="text-xl font-semibold text-center mb-3 text-slate-800">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
+      <p className="text-gray-600 mb-4 text-justify">{description}</p>
       <div className="mt-auto">
         <NavLink
           to="/contact"
@@ -89,7 +91,7 @@ const Services = () => {
         <div 
           className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-slate-900/90 z-10"
           style={{
-            backgroundImage: `url('https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=1920')`,
+            backgroundImage: `url(${services_background})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundBlendMode: 'overlay',
@@ -104,7 +106,7 @@ const Services = () => {
             transition={{ duration: 0.7 }}
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Nos Services</h1>
-            <p className="text-xl text-gray-300 mb-6 leading-relaxed">
+            <p className="text-xl text-gray-300 mb-6 leading-relaxed text-justify">
               Des solutions complètes pour sécuriser vos activités et optimiser vos prises de décision.
               Découvrez notre gamme de services spécialisés.
             </p>
@@ -131,7 +133,7 @@ const Services = () => {
       </section>
 
       {/* Database Details */}
-      <section id="database-details" className="py-16 bg-slate-100">
+      <section id="database-details" className="py-16 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -141,7 +143,7 @@ const Services = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl font-bold mb-6 text-slate-800">Base de Données</h2>
-              <p className="text-gray-700 mb-6">
+              <p className="text-gray-700 mb-6 text-justify">
                 Nous agrégeons les données d'entreprises, incluant vos clients, fournisseurs, 
                 actionnaires et partenaires. Notre technologie vous offre un accès rapide à des 
                 informations financières, juridiques et à des indicateurs clés.
@@ -175,7 +177,7 @@ const Services = () => {
               transition={{ duration: 0.6 }}
             >
               <img
-                src="https://images.pexels.com/photos/905163/pexels-photo-905163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src={services_image_1}
                 alt="Base de données"
                 className="w-full h-auto rounded-lg"
               />
@@ -209,7 +211,7 @@ const Services = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl font-bold mb-6 text-slate-800">Recherches Civiles</h2>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-4 text-justify">
                 Les investigations civiles, menées principalement pour le compte de compagnies 
                 d'assurances et d'établissements financiers, visent à localiser des débiteurs, 
                 des héritiers et des personnes disparues.
@@ -222,7 +224,7 @@ const Services = () => {
                   <div className="mr-2 mt-1 bg-yellow-500 rounded-full p-1">
                     <div className="h-2 w-2 rounded-full bg-white"></div>
                   </div>
-                  <span className="text-gray-700">
+                  <span className="text-gray-700 text-justify">
                     Identification et localisation de débiteurs afin de faciliter le recouvrement 
                     de créances et l'exécution des décisions de justice.
                   </span>
@@ -231,13 +233,13 @@ const Services = () => {
                   <div className="mr-2 mt-1 bg-yellow-500 rounded-full p-1">
                     <div className="h-2 w-2 rounded-full bg-white"></div>
                   </div>
-                  <span className="text-gray-700">
+                  <span className="text-gray-700 text-justify">
                     Recherche d'héritiers dans le cadre de successions complexes, en s'appuyant 
                     sur des bases de données publiques et privées.
                   </span>
                 </li>
               </ul>
-              <p className="text-gray-700">
+              <p className="text-gray-700 text-justify">
                 Nous recueillons également des preuves de solvabilité, telles que le patrimoine 
                 immobilier, flottant ou volant, afin d'optimiser les procédures de recouvrement.
               </p>
@@ -279,14 +281,14 @@ const Services = () => {
                 href="mailto:contact@neo-solutions.info"
                 className="bg-transparent border border-white/30 hover:bg-white/10 text-white font-medium px-6 py-3 rounded-md transition-colors flex items-center gap-2"
               >
-                {/*<Mail className="h-4 w-4" />*/}
+                
                 contact@neo-solutions.info
               </a>
               <a
                 href="tel:+21200000000"
                 className="bg-transparent border border-white/30 hover:bg-white/10 text-white font-medium px-6 py-3 rounded-md transition-colors flex items-center gap-2"
               >
-                {/*<Phone className="h-4 w-4" />*/}
+               
                 +212 00 00 00 00
               </a>
             </div>

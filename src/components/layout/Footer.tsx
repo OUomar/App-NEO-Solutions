@@ -1,5 +1,6 @@
-import { NavLink } from 'react-router-dom';
-import { Shield, Mail, Phone, MapPin } from 'lucide-react';
+import { NavLink } from 'react-router';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import logo_neo_exter from '../../assets/images/Logo_NEO_exter.svg';
 
 const Footer = () => {
   return (
@@ -9,9 +10,13 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <Shield className="h-6 w-6 text-yellow-500" />
+            <img
+              src={logo_neo_exter}
+              alt="Espace client interface"
+              className="h-10 w-auto rounded-lg object-contain"
+            />
               <span className="text-xl font-bold">
-                <span className="text-yellow-500">Néo</span> Solutions
+                <span className="text-yellow-400">Néo</span> Solutions
               </span>
             </div>
             <p className="text-sm text-gray-400">

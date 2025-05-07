@@ -56,7 +56,7 @@ const ClientArea = () => {
             transition={{ duration: 0.7 }}
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Espace Client</h1>
-            <p className="text-xl text-gray-300 mb-6 leading-relaxed">
+            <p className="text-xl text-gray-300 mb-6 leading-relaxed text-justify">
               Connectez-vous à votre espace client sécurisé pour accéder à vos rapports et gérer vos demandes.
             </p>
           </motion.div>
@@ -87,15 +87,15 @@ const ClientArea = () => {
                     Email
                   </label>
                   <input
-                    type="email"
+                    type="text"
                     id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500"
+                    className='w-full px-4 py-2 border rounded-md focus:ring-yellow-500 focus:border-yellow-500'
                     placeholder="votre@email.com"
                   />
+                  
                 </div>
                 
                 <div className="mb-6">
@@ -109,8 +109,7 @@ const ClientArea = () => {
                       name="password"
                       value={formData.password}
                       onChange={handleChange}
-                      required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 pr-10"
+                      className='w-full px-4 py-2 border rounded-md focus:ring-yellow-500 focus:border-yellow-500 pr-10'
                       placeholder="••••••••"
                     />
                     <button
@@ -192,7 +191,7 @@ const ClientArea = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3  gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 icon: "📊",
@@ -235,7 +234,7 @@ const ClientArea = () => {
               >
                 <div className="text-4xl flex justify-center mb-3">{feature.icon}</div>
                 <h3 className="text-xl font-semibold mb-2 text-center text-slate-800">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <p className="text-gray-600 text-justify">{feature.description}</p>
               </motion.div>
             ))}
           </div>

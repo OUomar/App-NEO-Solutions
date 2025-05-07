@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
-import { Menu, X, Shield, Lock } from 'lucide-react';
+import { NavLink } from 'react-router';
+import { Menu, X, Lock } from 'lucide-react';
+import logo_neo_exter from '../../assets/images/Logo_NEO_exter.svg';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,9 +33,13 @@ const Header = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <NavLink to="/" className="flex items-center gap-2" onClick={closeMenu}>
-            <Shield className="h-7 w-7 text-yellow-500" />
+            <img
+              src={logo_neo_exter}
+              alt="Espace client interface"
+              className="h-10 w-auto rounded-lg object-contain"
+            />
             <span className="text-xl font-bold text-white tracking-tight">
-              <span className="text-yellow-500">Néo</span> Solutions
+              <span className="text-yellow-400">Néo</span> Solutions
             </span>
           </NavLink>
 

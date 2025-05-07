@@ -1,4 +1,7 @@
 import { motion } from 'framer-motion';
+import about_background from '../assets/images/about_back_image.webp';
+import about_image_1 from '../assets/images/about_image_1.webp';
+import about_image_2 from '../assets/images/about_image_2.webp';
 import { ShieldCheck, Users, BookOpen } from 'lucide-react';
 
 const About = () => {
@@ -22,7 +25,7 @@ const About = () => {
         <div 
           className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-slate-900/90 z-10"
           style={{
-            backgroundImage: `url('https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1920')`,
+            backgroundImage:  `url(${about_background})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundBlendMode: 'overlay',
@@ -37,7 +40,7 @@ const About = () => {
             transition={{ duration: 0.7 }}
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">À Propos de Néo Solutions</h1>
-            <p className="text-xl text-gray-300 mb-6 leading-relaxed">
+            <p className="text-xl text-gray-300 mb-6 leading-relaxed text-justify">
               Expert en Intelligence Stratégique et Sécurité des Affaires, nous accompagnons les entreprises 
               dans la prise de décisions éclairées et la sécurisation de leurs activités.
             </p>
@@ -48,7 +51,7 @@ const About = () => {
       {/* Approach Section */}
       <section id="approche" className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-justify">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -57,7 +60,7 @@ const About = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-slate-800">Notre Approche</h2>
               <h3 className="text-xl font-semibold mb-4 text-slate-700">Un levier stratégique incontournable</h3>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-4 ">
                 L'Intelligence Économique est un pilier essentiel de la stratégie moderne d'entreprise, 
                 plaçant l'information au cœur du management. Elle repose sur une gestion optimisée des 
                 données pour concevoir des solutions adaptées à vos enjeux.
@@ -79,7 +82,7 @@ const About = () => {
               viewport={{ once: true }}
             >
               <img
-                src="https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src={about_image_1}
                 alt="Approche stratégique"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -89,9 +92,9 @@ const About = () => {
       </section>
 
       {/* Expertise Section */}
-      <section id="expertise" className="py-16 bg-slate-50">
+      <section id="expertise" className="py-16 bg-slate-100">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-justify">
             <motion.div
               className="order-2 lg:order-1 relative rounded-lg overflow-hidden"
               initial={{ opacity: 0, scale: 0.95 }}
@@ -100,7 +103,7 @@ const About = () => {
               viewport={{ once: true }}
             >
               <img
-                src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src={about_image_2}
                 alt="Expertise professionnelle"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
